@@ -17,6 +17,8 @@ app.get('*', (req, res) => res.redirect('/login'));
 
 socketHandler(socketIo);
 
-httpServer.listen(process.env.PORT || PORT, () => console.log(`Listen server on port ${PORT}`));
+const port = process.env.PORT ? process.env.PORT : PORT;
+
+httpServer.listen(port, () => console.log(`Listen server on port ${PORT}`));
 
 export default { app, httpServer };
