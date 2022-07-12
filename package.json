@@ -2,7 +2,7 @@
   "name": "http-ws-hw-starter",
   "version": "1.0.0",
   "description": "Starter for HTTP / WS homework. Binary Studio Academy",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
     "start": "node build/server.js",
     "build": "tsc"
