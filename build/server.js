@@ -16,5 +16,6 @@ app.use(express_1.default.static(config_1.STATIC_PATH));
 (0, routes_1.default)(app);
 app.get('*', (req, res) => res.redirect('/login'));
 (0, socket_1.default)(socketIo);
-httpServer.listen(process.env.PORT || config_1.PORT, () => console.log(`Listen server on port ${config_1.PORT}`));
+const port = process.env.PORT ? process.env.PORT : config_1.PORT;
+httpServer.listen(port, () => console.log(`Listen server on port ${config_1.PORT}`));
 exports.default = { app, httpServer };
